@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+ 
+<hibernate-configuration>
+	<session-factory>
+	
+		<property name="format_sql">true</property>
+	    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+	    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/StraitsTimes</property>
+	    <property name="hibernate.connection.username">shine</property>
+	    <property name="hibernate.connection.password">shine</property>
+	    
+	    <!-- Auto update datas in data table -->
+		<property name="hbm2ddl.auto">update</property>
+		
+	    <mapping class="edu.astar.ihpc.StraitsTimes.database.dto.News" />
+	    <mapping class="edu.astar.ihpc.StraitsTimes.database.dto.Comment" />
+	    <mapping class="edu.astar.ihpc.StraitsTimes.database.dto.User" />
+	</session-factory>
+</hibernate-configuration>
